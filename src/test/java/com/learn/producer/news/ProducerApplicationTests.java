@@ -1,4 +1,4 @@
-package com.learn.producer;
+package com.learn.producer.news;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

@@ -6,3 +6,10 @@ spring:
       bootstrap-servers: localhost:9092
       key-serializer: org.apache.kafka.common.serialization.StringSerializer
       value-serializer: org.apache.kafka.common.serialization.StringSerializer
+  cloud:
+    zookeeper:
+      connect-string: localhost:2181
+server:
+  port: 8083
+
+

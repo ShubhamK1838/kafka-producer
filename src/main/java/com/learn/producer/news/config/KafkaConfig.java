@@ -1,7 +1,7 @@
-package com.learn.producer.config;
+package com.learn.producer.news.config;
 
 
-import com.learn.producer.Constants;
+import com.learn.producer.news.constant.Constants;
 import org.apache.kafka.clients.admin.NewTopic;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -13,6 +13,6 @@ public class KafkaConfig {
 
     @Bean
     public NewTopic topicBuilder() {
-        return TopicBuilder.name(Constants.TOPIC).build();
+        return TopicBuilder.name(Constants.TOPIC_NAME).build();
     }
 }

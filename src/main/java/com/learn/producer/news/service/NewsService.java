@@ -1,20 +1,19 @@
-package com.learn.producer.service;
+package com.learn.producer.news.service;
 
 
+import com.learn.producer.news.constant.Constants;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.autoconfigure.AutoConfiguration;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Service;
 
 @Service
-public class ProducerService {
+public class NewsService {
 
     @Autowired
     private KafkaTemplate<String, String> kafkaTemplate;
 
-    public void sendMessage(String topic, String message) {
-        kafkaTemplate.send(topic, message);
+    public void produceNews(String message) {
+        kafkaTemplate.send(Constants.TOPIC_NAME, message);
     }
-
 
 }
